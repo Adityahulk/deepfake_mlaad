@@ -278,7 +278,7 @@ def get_dataloader(split, batch_size):
     
     # 2. Load REAL dataset
     print(f"Loading REAL data: librispeech_asr (split={real_split})")
-    real_ds = load_dataset("librispeech_asr", 
+    real_ds = load_dataset("openslr/librispeech_asr", 
                            "clean", # 'clean' config
                            split=real_split, 
                            streaming=True)
