@@ -93,7 +93,7 @@ Here is the step-by-step plan from "code works" to "paper submitted."
 
       * **Goal:** Just make sure the code doesn't crash, the loss goes down (even slightly), and the EER is not 50.0% (which is random guessing).
 
-### Phase 2: 📈 The Main Experiments
+### Phase 2: The Main Experiments
 
 3.  **Train the Baseline Model:** This is **the most important step** for a paper. You must prove your new idea is better than a simple model.
 
@@ -113,7 +113,7 @@ Here is the step-by-step plan from "code works" to "paper submitted."
       * Try running experiments with `LAMBDA_ADV = 0.01`, `LAMBDA_ADV = 0.1` (current), and `LAMBDA_ADV = 1.0`.
       * Pick the one that gives the best EER on your validation set.
 
-### Phase 3: 🌍 The Generalization Test (The A\* Proof)
+### Phase 3: The Generalization Test (The A\* Proof)
 
 This is the part that gets you into a top conference. You must show your model works on data it's **never seen before.**
 
@@ -134,7 +134,7 @@ This is the part that gets you into a top conference. You must show your model w
 
 *(Note: These numbers are just examples, but this is what you're looking for. Your model (Ours) should be **dramatically** better on the unseen ASVspoof data).*
 
-### Phase 4: ✍️ Write and Submit
+### Phase 4: Write and Submit
 
 9.  **Write the Paper:** Structure your paper around this story:
 
