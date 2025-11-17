@@ -35,7 +35,7 @@ At inference time, **we discard the heavy Wav2Vec2 Teacher and the Discriminator
 
 This model is trained by combining two large-scale, streaming datasets:
 
-  * **Fake Audio (Label 1):** [`mueller91/MLAAD`](https://www.google.com/search?q=%5Bhttps://huggingface.co/datasets/mueller91/MLAAD%5D\(https://huggingface.co/datasets/mueller91/MLAAD\))
+  * **Fake Audio (Label 1):** [`mueller91/MLAAD`](https://huggingface.co/datasets/mueller91/MLAAD)
       * A massive, multi-lingual dataset containing audio from over 119 different spoofing models.
   * **Real Audio (Label 0):** [`librispeech_asr` (clean subsets)](https://www.google.com/search?q=%5Bhttps://huggingface.co/datasets/librispeech_asr%5D\(https://huggingface.co/datasets/librispeech_asr\))
       * A large corpus of high-quality, "bona fide" (real) speech.
