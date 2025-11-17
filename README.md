@@ -37,7 +37,7 @@ This model is trained by combining two large-scale, streaming datasets:
 
   * **Fake Audio (Label 1):** [`mueller91/MLAAD`](https://huggingface.co/datasets/mueller91/MLAAD)
       * A massive, multi-lingual dataset containing audio from over 119 different spoofing models.
-  * **Real Audio (Label 0):** [`librispeech_asr` (clean subsets)](https://www.google.com/search?q=%5Bhttps://huggingface.co/datasets/librispeech_asr%5D\(https://huggingface.co/datasets/librispeech_asr\))
+  * **Real Audio (Label 0):** [`librispeech_asr` (clean subsets)](https://huggingface.co/datasets/openslr/librispeech_asr)
       * A large corpus of high-quality, "bona fide" (real) speech.
 
 The dataloader interleaves these two streams 50/50 to create balanced batches.
