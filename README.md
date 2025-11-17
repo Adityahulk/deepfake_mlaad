@@ -51,6 +51,8 @@ Install all necessary Python libraries.
 ```bash
 pip install torch torchaudio numpy pandas scikit-learn
 pip install transformers datasets
+pip install torchcodec
+conda install -c conda-forge ffmpeg
 ```
 
 ### 2\. Hugging Face Authentication
@@ -78,3 +80,68 @@ The script will:
   * Train the model for the specified number of epochs.
   * At the end of each epoch, it will run a validation loop and report the **Equal Error Rate (EER)**.
   * It will automatically save the model with the best EER to `prosody_encoder_best.pth`.
+
+-----
+
+## To-Do List
+
+Here is the step-by-step plan from "code works" to "paper submitted."
+
+### Phase 1: Get the Code Running
+
+1.  **Run a "Smoke Test":** Don't try to train for 50 epochs right away. Modify your training loop to run for just **100 steps** (`STEPS_PER_EPOCH = 100`) and validate for **20 steps** (`VAL_STEPS = 20`). Run this for just 2 epochs.
+
+      * **Goal:** Just make sure the code doesn't crash, the loss goes down (even slightly), and the EER is not 50.0% (which is random guessing).
+
+### Phase 2: 📈 The Main Experiments
+
+3.  **Train the Baseline Model:** This is **the most important step** for a paper. You must prove your new idea is better than a simple model.
+
+      * **How:** In `train.py`, find the line `total_loss = loss_spoof + loss_adv`.
+      * **Change it** to `total_loss = loss_spoof`.
+      * **Train this model** for the full 50 epochs and save its best EER. This is your "Baseline" (a standard TCN/ResNet without disentanglement).
+
+4.  **Train the "Hero" Model (Your Model):**
+
+      * **Change the loss back** to `total_loss = loss_spoof + loss_adv`.
+      * **Train for 50-100 epochs.** This is your main experimental run. Let it cook for a day or two.
+      * **Save the best model** (`prosody_encoder_best.pth`).
+
+5.  **Hyperparameter Tuning:**
+
+      * Your first run might not be perfect. The most important knob to turn is `LAMBDA_ADV`.
+      * Try running experiments with `LAMBDA_ADV = 0.01`, `LAMBDA_ADV = 0.1` (current), and `LAMBDA_ADV = 1.0`.
+      * Pick the one that gives the best EER on your validation set.
+
+### Phase 3: 🌍 The Generalization Test (The A\* Proof)
+
+This is the part that gets you into a top conference. You must show your model works on data it's **never seen before.**
+
+6.  **Find a Test Set:** Download the **ASVspoof 2019 "Logical Access"** evaluation set. This is the gold standard for testing.
+7.  **Write `test.py`:** Create a new, simple script that:
+      * Loads your saved `prosody_encoder_best.pth` model (for both the Baseline and Hero).
+      * Loads the ASVspoof 2019 audio.
+      * Processes the audio (Mel-spec, padding, etc.) *exactly* as you did in training.
+      * Feeds it to your model and calculates the final EER.
+8.  **Create "The Table":** This is your paper's money-maker. It will look like this:
+
+| Model | Training Data | Testing Data | EER (%) |
+| :--- | :--- | :--- | :--- |
+| Baseline (TCN) | MLAAD + LibriSpeech | MLAAD (Validation) | 10.5% |
+| **Ours (Disentangled)** | MLAAD + LibriSpeech | MLAAD (Validation) | **8.2%** |
+| Baseline (TCN) | MLAAD + LibriSpeech | **ASVspoof 2019 (Unseen)** | 45.2% |
+| **Ours (Disentangled)** | MLAAD + LibriSpeech | **ASVspoof 2019 (Unseen)** | **12.1%** |
+
+*(Note: These numbers are just examples, but this is what you're looking for. Your model (Ours) should be **dramatically** better on the unseen ASVspoof data).*
+
+### Phase 4: ✍️ Write and Submit
+
+9.  **Write the Paper:** Structure your paper around this story:
+
+      * **Intro:** "Deepfake detectors overfit. This is a huge problem."
+      * **Method:** "We propose a novel disentanglement architecture that separates prosody from content to solve this."
+      * **Experiments:** "We trained on MLAAD. We show our model is good."
+      * **Results:** "But most importantly, we tested on ASVspoof, and 'The Table' proves our model generalizes *far* better than a standard baseline."
+      * **Conclusion:** "This is the right way to build detectors."
+
+10. **Check Deadlines:** ICASSP and INTERSPEECH have *very* strict, non-negotiable deadlines. Find out when they are (e.g., INTERSPEECH is often around March) and plan your work backward from that date.

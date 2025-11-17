@@ -7,6 +7,7 @@ from torch.autograd import Function
 
 # For loading models and data
 from transformers import Wav2Vec2Model
+import datasets
 from datasets import load_dataset, Audio, interleave_datasets
 import torchaudio.transforms as T
 import torchaudio
@@ -278,8 +279,7 @@ def get_dataloader(split, batch_size):
     
     # 2. Load REAL dataset
     print(f"Loading REAL data: librispeech_asr (split={real_split})")
-    real_ds = load_dataset("openslr/librispeech_asr", 
-                           "clean", # 'clean' config
+    real_ds = load_dataset("openslr/librispeech_asr",
                            split=real_split, 
                            streaming=True)
     real_ds = real_ds.map(preprocess_real, batched=True, batch_size=batch_size)
