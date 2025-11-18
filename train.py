@@ -2,13 +2,15 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, IterableDataset
 from torch.autograd import Function
+import itertools
+import random
 
 # For loading models and data
 from transformers import Wav2Vec2Model
 import datasets
-from datasets import load_dataset, Audio, interleave_datasets
+from datasets import load_dataset, Audio
 import torchaudio.transforms as T
 import torchaudio
 
@@ -208,64 +210,67 @@ def pad_or_truncate(audio, max_len):
         audio = torch.cat((audio, padding), dim=0)
     return audio
 
-def preprocess_batch(batch, label_value):
+def preprocess_example(example, label_value):
     """
-    A single function to process a batch from *any* dataset.
-    It resamples, pads/truncates, creates mels, and assigns a label.
+    Process a single example from the dataset.
+    Returns a dictionary with properly shaped tensors.
     """
-    processed = {"raw_audio": [], "melspec": [], "label": []}
+    # Handle both dict with 'audio' key and direct audio dict
+    if "audio" in example:
+        audio_item = example["audio"]
+    else:
+        audio_item = example
     
-    for item in batch["audio"]:
-        audio_array = torch.FloatTensor(item["array"]).to(DEVICE)
-        
-        # 1. Resample if necessary
-        if item["sampling_rate"] != SAMPLE_RATE:
-            resampler = get_resampler(item["sampling_rate"], SAMPLE_RATE)
-            audio_array = resampler(audio_array)
+    audio_array = torch.FloatTensor(audio_item["array"]).to(DEVICE)
+    
+    # 1. Resample if necessary
+    if audio_item["sampling_rate"] != SAMPLE_RATE:
+        resampler = get_resampler(audio_item["sampling_rate"], SAMPLE_RATE)
+        audio_array = resampler(audio_array)
 
-        # 2. Pad/truncate raw audio
-        raw_audio = pad_or_truncate(audio_array, MAX_LEN_SAMPLES)
-        
-        # 3. Create Mel Spectrogram
-        melspec = mel_transform(raw_audio) # (Mels, Time)
-        
-        # 4. Add channel dim and pad/truncate time
-        melspec = melspec.unsqueeze(0) # (1, Mels, Time)
-        if melspec.shape[2] > MAX_MEL_FRAMES:
-            melspec = melspec[:, :, :MAX_MEL_FRAMES]
-        else:
-            padding = torch.zeros(1, N_MELS, MAX_MEL_FRAMES - melspec.shape[2]).to(DEVICE)
-            melspec = torch.cat((melspec, padding), dim=2)
-            
-        processed["raw_audio"].append(raw_audio.cpu())
-        processed["melspec"].append(melspec.cpu())
-        processed["label"].append(label_value)
+    # 2. Pad/truncate raw audio
+    raw_audio = pad_or_truncate(audio_array, MAX_LEN_SAMPLES)
     
-    # Collate into tensors
-    processed["raw_audio"] = torch.stack(processed["raw_audio"])
-    processed["melspec"] = torch.stack(processed["melspec"])
-    processed["label"] = torch.tensor(processed["label"]).long()
+    # 3. Create Mel Spectrogram
+    melspec = mel_transform(raw_audio) # (Mels, Time)
     
-    return processed
+    # 4. Add channel dim and pad/truncate time
+    melspec = melspec.unsqueeze(0) # (1, Mels, Time)
+    if melspec.shape[2] > MAX_MEL_FRAMES:
+        melspec = melspec[:, :, :MAX_MEL_FRAMES]
+    else:
+        padding = torch.zeros(1, N_MELS, MAX_MEL_FRAMES - melspec.shape[2]).to(DEVICE)
+        melspec = torch.cat((melspec, padding), dim=2)
+    
+    # Return as numpy arrays for PyArrow compatibility
+    return {
+        "raw_audio": raw_audio.cpu().numpy(),
+        "melspec": melspec.cpu().numpy(),
+        "label": np.array(label_value, dtype=np.int64)
+    }
 
-def preprocess_fake(batch):
+def preprocess_fake(example):
     # Note: MLAAD's 'label' (104, etc.) is the *spoof type*.
     # We ignore it and assign a binary label '1' for "spoof".
-    return preprocess_batch(batch, label_value=1)
+    return preprocess_example(example, label_value=1)
 
-def preprocess_real(batch):
+def preprocess_real(example):
     # LibriSpeech has no 'label' column. We assign '0' for "bona fide".
-    return preprocess_batch(batch, label_value=0)
+    return preprocess_example(example, label_value=0)
 
 def get_dataloader(split, batch_size):
     print(f"\n--- Loading {split} data stream ---")
+    
+    # Configuration
+    TRAIN_SPLIT_RATIO = 0.8  # 80% for training, 20% for validation
     
     if split == 'train':
         fake_split = 'train'
         # Using 'train.100' for a balanced size. Use 'train.360' or 'train.960' for more data.
         real_split = 'train.clean.100' 
     else:
-        fake_split = 'validation'
+        # For validation, we'll split the 'train' split deterministically
+        fake_split = 'train'
         real_split = 'validation.clean'
 
     # 1. Load FAKE dataset
@@ -273,43 +278,123 @@ def get_dataloader(split, batch_size):
     print(f"Loading FAKE data: mueller91/MLAAD (split={fake_split})")
     fake_ds = load_dataset("mueller91/MLAAD", 
                            split=fake_split, 
-                           streaming=True, 
-                           trust_remote_code=True)
-    fake_ds = fake_ds.map(preprocess_fake, batched=True, batch_size=batch_size)
+                           streaming=True)
+    
+    # Split MLAAD dataset deterministically using hash-based filtering
+    # This ensures consistent train/val split across runs
+    if split == 'validation':
+        # For validation, filter to get the validation portion (last 20%)
+        def is_validation(example, idx):
+            # Use hash of a unique identifier to deterministically split
+            # Use file path or index as the key
+            key = example.get('path', str(idx))
+            hash_val = hash(key) % 100
+            return hash_val >= int(TRAIN_SPLIT_RATIO * 100)  # Last 20%
+        fake_ds = fake_ds.filter(is_validation, with_indices=True)
+    else:
+        # For training, filter to get the training portion (first 80%)
+        def is_training(example, idx):
+            key = example.get('path', str(idx))
+            hash_val = hash(key) % 100
+            return hash_val < int(TRAIN_SPLIT_RATIO * 100)  # First 80%
+        fake_ds = fake_ds.filter(is_training, with_indices=True)
+    
+    fake_ds = fake_ds.map(preprocess_fake, batched=False, remove_columns=["audio"])
     
     # 2. Load REAL dataset
     print(f"Loading REAL data: librispeech_asr (split={real_split})")
     real_ds = load_dataset("openslr/librispeech_asr",
                            split=real_split, 
                            streaming=True)
-    real_ds = real_ds.map(preprocess_real, batched=True, batch_size=batch_size)
+    real_ds = real_ds.map(preprocess_real, batched=False, remove_columns=["audio"])
 
-    # 3. Interleave them 50/50
-    # This is the key to creating balanced batches from two streams
+    # 3. Manually interleave them 50/50 to avoid feature inference issues
+    # This avoids the PyArrow serialization problem with interleave_datasets
     print("Interleaving real and fake streams...")
-    combined_ds = interleave_datasets(
-        [fake_ds, real_ds], 
-        probabilities=[0.5, 0.5], 
-        seed=42
-    )
-
-    # 4. Shuffle the combined stream
-    # buffer_size controls the "randomness"
-    shuffled_ds = combined_ds.shuffle(seed=42, buffer_size=1000) 
-
-    # 5. Create the DataLoader
-    # We must define a custom collate_fn because the .map() already
-    # stacked our tensors into batches.
-    def collate_fn(batch_dict):
-        # 'batch_dict' is actually just one processed batch
-        # from our map function.
-        return batch_dict
+    
+    class InterleavedDataset(IterableDataset):
+        """Manually interleave two dataset iterators with 50/50 probability"""
+        def __init__(self, fake_ds, real_ds, seed=42):
+            super().__init__()
+            self.fake_ds = fake_ds
+            self.real_ds = real_ds
+            self.seed = seed
         
-    # We set batch_size=None because our .map() function
-    # is already creating batches.
-    loader = DataLoader(shuffled_ds, 
-                        batch_size=None, # Already batched in .map()
-                        num_workers=0) # Must be 0 for this map-style
+        def __iter__(self):
+            fake_iter = iter(self.fake_ds)
+            real_iter = iter(self.real_ds)
+            rng = random.Random(self.seed)
+            
+            # Use a buffer to store items for shuffling
+            buffer = []
+            buffer_size = 1000
+            
+            fake_exhausted = False
+            real_exhausted = False
+            
+            while not (fake_exhausted and real_exhausted):
+                # 50/50 chance to pick from fake or real
+                if rng.random() < 0.5:
+                    if not fake_exhausted:
+                        try:
+                            item = next(fake_iter)
+                            buffer.append(item)
+                        except StopIteration:
+                            fake_exhausted = True
+                    elif not real_exhausted:
+                        try:
+                            item = next(real_iter)
+                            buffer.append(item)
+                        except StopIteration:
+                            real_exhausted = True
+                else:
+                    if not real_exhausted:
+                        try:
+                            item = next(real_iter)
+                            buffer.append(item)
+                        except StopIteration:
+                            real_exhausted = True
+                    elif not fake_exhausted:
+                        try:
+                            item = next(fake_iter)
+                            buffer.append(item)
+                        except StopIteration:
+                            fake_exhausted = True
+                
+                # Shuffle and yield buffer when it's full
+                if len(buffer) >= buffer_size:
+                    rng.shuffle(buffer)
+                    yield from buffer
+                    buffer = []
+            
+            # Yield remaining items in buffer
+            if buffer:
+                rng.shuffle(buffer)
+                yield from buffer
+    
+    combined_ds = InterleavedDataset(fake_ds, real_ds, seed=42) 
+
+    # 5. Create the DataLoader with proper batching
+    def collate_fn(batch_list):
+        """
+        Collate a list of examples into a batch.
+        Each example is a dict with 'raw_audio', 'melspec', 'label'.
+        """
+        # Stack all examples into batches
+        raw_audio_batch = torch.from_numpy(np.stack([ex['raw_audio'] for ex in batch_list]))
+        melspec_batch = torch.from_numpy(np.stack([ex['melspec'] for ex in batch_list]))
+        label_batch = torch.from_numpy(np.stack([ex['label'] for ex in batch_list])).long()
+        
+        return {
+            'raw_audio': raw_audio_batch,
+            'melspec': melspec_batch,
+            'label': label_batch
+        }
+    
+    loader = DataLoader(combined_ds, 
+                        batch_size=batch_size,
+                        collate_fn=collate_fn,
+                        num_workers=0) # Must be 0 for streaming datasets
     
     print(f"--- {split} dataloader created ---")
     return loader
@@ -336,11 +421,11 @@ def train_epoch(model, dataloader, optimizer, epoch):
     for i, batch in enumerate(dataloader):
         if i >= STEPS_PER_EPOCH:
             break
-            
-        # Move data to GPU
-        raw_audio = batch['raw_audio'].to(DEVICE)
-        mels = batch['melspec'].to(DEVICE)
-        labels = batch['label'].to(DEVICE)
+        
+        # Move data to GPU (tensors are already created by collate_fn)
+        raw_audio = batch['raw_audio'].to(DEVICE)  # (Batch, Samples)
+        mels = batch['melspec'].to(DEVICE)  # (Batch, 1, N_Mels, Time)
+        labels = batch['label'].to(DEVICE)  # (Batch,)
         
         optimizer.zero_grad()
         
@@ -375,9 +460,10 @@ def validate(model, dataloader, epoch):
             if i >= VAL_STEPS:
                 break
                 
-            raw_audio = batch['raw_audio'].to(DEVICE)
-            mels = batch['melspec'].to(DEVICE)
-            labels = batch['label'] # Keep on CPU
+            # Move data to GPU (tensors are already created by collate_fn)
+            raw_audio = batch['raw_audio'].to(DEVICE)  # (Batch, Samples)
+            mels = batch['melspec'].to(DEVICE)  # (Batch, 1, N_Mels, Time)
+            labels = batch['label']  # Keep on CPU for evaluation
             
             # Forward pass (ONLY the lightweight prosody encoder)
             _, out_spoof = model.prosody_encoder(mels)
