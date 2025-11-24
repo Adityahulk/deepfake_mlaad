@@ -1,0 +1,405 @@
+
+--- EPOCH 6 SUMMARY ---
+Avg Train Loss: 0.1345
+
+--- Validating Epoch 6 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 6 EER: 33.56% ---
+
+
+--- EPOCH 7 SUMMARY ---
+Avg Train Loss: 0.1165
+
+--- Validating Epoch 7 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 7 EER: 29.88% ---
+✨ New best EER: 29.88%. Saving model... ✨
+
+--- EPOCH 8 SUMMARY ---
+Avg Train Loss: 0.1151
+
+--- Validating Epoch 8 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 8 EER: 33.63% ---
+
+--- EPOCH 9 SUMMARY ---
+Avg Train Loss: 0.1053
+
+--- Validating Epoch 9 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 9 EER: 32.19% ---
+
+--- EPOCH 10 SUMMARY ---
+Avg Train Loss: 0.1026
+
+--- Validating Epoch 10 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 10 EER: 51.25% ---
+
+--- EPOCH 11 SUMMARY ---
+Avg Train Loss: 0.1000
+
+--- Validating Epoch 11 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 11 EER: 50.00% ---
+
+
+--- EPOCH 12 SUMMARY ---
+Avg Train Loss: 0.0903
+
+--- Validating Epoch 12 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 12 EER: 48.01% ---
+
+--- EPOCH 13 SUMMARY ---
+Avg Train Loss: 0.0907
+
+--- Validating Epoch 13 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 13 EER: 28.25% ---
+✨ New best EER: 28.25%. Saving model... ✨
+
+--- EPOCH 14 SUMMARY ---
+Avg Train Loss: 0.0824
+
+--- Validating Epoch 14 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 14 EER: 31.25% ---
+
+--- EPOCH 15 SUMMARY ---
+Avg Train Loss: 0.0862
+
+--- Validating Epoch 15 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 15 EER: 26.07% ---
+✨ New best EER: 26.07%. Saving model... ✨
+
+
+--- EPOCH 16 SUMMARY ---
+Avg Train Loss: 0.0889
+
+--- Validating Epoch 16 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 16 EER: 26.74% ---
+
+
+--- EPOCH 17 SUMMARY ---
+Avg Train Loss: 0.0787
+
+--- Validating Epoch 17 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 17 EER: 25.75% ---
+✨ New best EER: 25.75%. Saving model... ✨
+
+--- EPOCH 18 SUMMARY ---
+Avg Train Loss: 0.0797
+
+--- Validating Epoch 18 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 18 EER: 23.70% ---
+✨ New best EER: 23.70%. Saving model... ✨
+
+--- EPOCH 19 SUMMARY ---
+Avg Train Loss: 0.0789
+
+--- Validating Epoch 19 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 19 EER: 25.06% ---
+
+--- EPOCH 20 SUMMARY ---
+Avg Train Loss: 0.0815
+
+--- Validating Epoch 20 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 20 EER: 25.44% ---
+
+--- EPOCH 21 SUMMARY ---
+Avg Train Loss: 0.0819
+
+--- Validating Epoch 21 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 21 EER: 24.37% ---
+
+--- EPOCH 22 SUMMARY ---
+Avg Train Loss: 0.0790
+
+--- Validating Epoch 22 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 22 EER: 50.00% ---
+
+--- EPOCH 23 SUMMARY ---
+Avg Train Loss: 0.0764
+
+--- Validating Epoch 23 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 23 EER: 26.82% ---
+
+--- EPOCH 24 SUMMARY ---
+Avg Train Loss: 0.0788
+
+--- Validating Epoch 24 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 24 EER: 25.50% ---
+
+--- EPOCH 25 SUMMARY ---
+Avg Train Loss: 0.0908
+
+--- Validating Epoch 25 ---
+  Validation Step 50/100...
+'(ReadTimeoutError("HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: e8f02e90-4dc0-4cf5-ab54-002c1098923e)')' thrown while requesting GET https://huggingface.co/datasets/mueller91/MLAAD/resolve/c519e2a0b1f2840458f28ea20111116092d447c2/fake/bg/tts_models_multilingual_multi-dataset_bark/silent_bullet_13_f000102.wav
+Retrying in 1s [Retry 1/5].
+  Validation Step 100/100...
+--- VALIDATION EPOCH 25 EER: 50.06% ---
+
+--- EPOCH 26 SUMMARY ---
+Avg Train Loss: 0.0791
+
+--- Validating Epoch 26 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 26 EER: 34.31% ---
+
+--- EPOCH 27 SUMMARY ---
+Avg Train Loss: 0.0771
+
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 27 EER: 28.57% ---
+
+
+  Epoch 28 | Step 500/500 | Total Loss: 0.1132 | Spoof Loss: 0.0242 | Adv Loss: 0.0089
+--- EPOCH 28 SUMMARY ---
+Avg Train Loss: 0.0721
+
+--- Validating Epoch 28 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 28 EER: 27.50% ---
+
+  Epoch 29 | Step 500/500 | Total Loss: 0.0917 | Spoof Loss: 0.0004 | Adv Loss: 0.0091
+--- EPOCH 29 SUMMARY ---
+Avg Train Loss: 0.0738
+
+--- Validating Epoch 29 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 29 EER: 34.70% ---
+
+
+  Epoch 30 | Step 450/500 | Total Loss: 0.1347 | Spoof Loss: 0.0453 | Adv Loss: 0.0089
+  Epoch 30 | Step 500/500 | Total Loss: 0.0900 | Spoof Loss: 0.0008 | Adv Loss: 0.0089
+--- EPOCH 30 SUMMARY ---
+Avg Train Loss: 0.0783
+
+--- Validating Epoch 30 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 30 EER: 30.50% ---
+
+  Epoch 31 | Step 500/500 | Total Loss: 0.0867 | Spoof Loss: 0.0002 | Adv Loss: 0.0087
+--- EPOCH 31 SUMMARY ---
+Avg Train Loss: 0.0758
+
+--- Validating Epoch 31 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 31 EER: 19.50% ---
+✨ New best EER: 19.50%. Saving model... ✨
+
+  Epoch 32 | Step 500/500 | Total Loss: 0.2438 | Spoof Loss: 0.1554 | Adv Loss: 0.0088
+--- EPOCH 32 SUMMARY ---
+Avg Train Loss: 0.0757
+
+--- Validating Epoch 32 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 32 EER: 22.93% ---
+
+  Epoch 33 | Step 500/500 | Total Loss: 0.0892 | Spoof Loss: 0.0004 | Adv Loss: 0.0089
+--- EPOCH 33 SUMMARY ---
+Avg Train Loss: 0.0792
+
+--- Validating Epoch 33 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 33 EER: 31.69% ---
+
+--- EPOCH 34 SUMMARY ---
+Avg Train Loss: 0.0713
+
+--- Validating Epoch 34 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 34 EER: 50.00% ---
+
+--- EPOCH 35 SUMMARY ---
+Avg Train Loss: 0.0728
+
+--- Validating Epoch 35 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 35 EER: 50.00% ---
+
+--- EPOCH 36 SUMMARY ---
+Avg Train Loss: 0.0708
+
+--- Validating Epoch 36 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 36 EER: 27.30% ---
+
+
+--- EPOCH 37 SUMMARY ---
+Avg Train Loss: 0.0846
+
+--- Validating Epoch 37 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 37 EER: 50.00% ---
+=
+--- EPOCH 38 SUMMARY ---
+Avg Train Loss: 0.0799
+
+--- Validating Epoch 38 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 38 EER: 50.33% ---
+
+--- EPOCH 39 SUMMARY ---
+Avg Train Loss: 0.0717
+
+--- Validating Epoch 39 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 39 EER: 26.38% ---
+
+--- EPOCH 40 SUMMARY ---
+Avg Train Loss: 0.0777
+
+--- Validating Epoch 40 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 40 EER: 30.93% ---
+
+--- EPOCH 41 SUMMARY ---
+Avg Train Loss: 0.0738
+
+--- Validating Epoch 41 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 41 EER: 49.79% ---
+
+  Epoch 42 | Step 500/500 | Total Loss: 0.0896 | Spoof Loss: 0.0002 | Adv Loss: 0.0089
+--- EPOCH 42 SUMMARY ---
+Avg Train Loss: 0.0722
+
+--- Validating Epoch 42 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 42 EER: 48.14% ---
+
+  Epoch 43 | Step 500/500 | Total Loss: 0.0941 | Spoof Loss: 0.0078 | Adv Loss: 0.0086
+--- EPOCH 43 SUMMARY ---
+Avg Train Loss: 0.0748
+
+--- Validating Epoch 43 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 43 EER: 50.19% ---
+
+--- EPOCH 44 SUMMARY ---
+Avg Train Loss: 0.0733
+
+--- Validating Epoch 44 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 44 EER: 50.00% ---
+
+  Epoch 45 | Step 400/500 | Total Loss: 0.0939 | Spoof Loss: 0.0000 | Adv Loss: 0.0094
+  Epoch 45 | Step 450/500 | Total Loss: 0.0831 | Spoof Loss: 0.0009 | Adv Loss: 0.0082
+  Epoch 45 | Step 500/500 | Total Loss: 0.0909 | Spoof Loss: 0.0007 | Adv Loss: 0.0090
+--- EPOCH 45 SUMMARY ---
+Avg Train Loss: 0.0723
+
+--- Validating Epoch 45 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 45 EER: 50.00% ---
+
+  Epoch 46 | Step 500/500 | Total Loss: 0.0896 | Spoof Loss: 0.0000 | Adv Loss: 0.0090
+--- EPOCH 46 SUMMARY ---
+Avg Train Loss: 0.0719
+
+--- Validating Epoch 46 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 46 EER: 21.94% ---
+
+
+  Epoch 47 | Step 500/500 | Total Loss: 0.0909 | Spoof Loss: 0.0000 | Adv Loss: 0.0091
+--- EPOCH 47 SUMMARY ---
+Avg Train Loss: 0.0709
+
+--- Validating Epoch 47 ---
+  Validation Step 50/100...
+HTTP Error 504 thrown while requesting GET https://huggingface.co/datasets/mueller91/MLAAD/resolve/c519e2a0b1f2840458f28ea20111116092d447c2/fake/bg/tts_models_multilingual_multi-dataset_bark/jane_eyre_21_f000025.wav
+Retrying in 1s [Retry 1/5].
+HTTP Error 504 thrown while requesting GET https://huggingface.co/datasets/mueller91/MLAAD/resolve/c519e2a0b1f2840458f28ea20111116092d447c2/fake/bg/tts_models_multilingual_multi-dataset_bark/jane_eyre_21_f000025.wav
+Retrying in 2s [Retry 2/5].
+  Validation Step 100/100...
+--- VALIDATION EPOCH 47 EER: 25.38% ---
+
+
+  Epoch 48 | Step 450/500 | Total Loss: 0.1613 | Spoof Loss: 0.0705 | Adv Loss: 0.0091
+  Epoch 48 | Step 500/500 | Total Loss: 0.1180 | Spoof Loss: 0.0270 | Adv Loss: 0.0091
+--- EPOCH 48 SUMMARY ---
+Avg Train Loss: 0.0785
+
+--- Validating Epoch 48 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 48 EER: 46.85% ---
+
+
+  Epoch 49 | Step 500/500 | Total Loss: 0.0916 | Spoof Loss: 0.0003 | Adv Loss: 0.0091
+--- EPOCH 49 SUMMARY ---
+Avg Train Loss: 0.0795
+
+--- Validating Epoch 49 ---
+  Validation Step 50/100...
+
+
+--- Starting Epoch 50/50 ---
+
+  Epoch 50 | Step 450/500 | Total Loss: 0.0869 | Spoof Loss: 0.0000 | Adv Loss: 0.0087
+  Epoch 50 | Step 500/500 | Total Loss: 0.0919 | Spoof Loss: 0.0005 | Adv Loss: 0.0091
+--- EPOCH 50 SUMMARY ---
+Avg Train Loss: 0.0703
+
+--- Validating Epoch 50 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 50 EER: 50.00% ---
+--- Training Complete ---
+Best validation EER: 19.50%
+
+

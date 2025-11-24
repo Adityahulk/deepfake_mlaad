@@ -1,0 +1,1211 @@
+nohup: ignoring input
+--- Using device: cuda ---
+sox_io backend not available. Using default.
+Initializing model...
+Loading frozen facebook/wav2vec2-base...
+--- Starting Training for 50 Epochs ---
+--- Each epoch = 500 train steps + 100 val steps ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 1/50 ---
+  Epoch 1 | Step 50/500 | Total Loss: 0.5003 | Spoof Loss: 0.4713 | Adv Loss: 0.0290
+  Epoch 1 | Step 100/500 | Total Loss: 0.1947 | Spoof Loss: 0.1834 | Adv Loss: 0.0113
+  Epoch 1 | Step 150/500 | Total Loss: 0.1483 | Spoof Loss: 0.1411 | Adv Loss: 0.0072
+  Epoch 1 | Step 200/500 | Total Loss: 0.1337 | Spoof Loss: 0.1287 | Adv Loss: 0.0050
+  Epoch 1 | Step 250/500 | Total Loss: 0.0871 | Spoof Loss: 0.0791 | Adv Loss: 0.0080
+  Epoch 1 | Step 300/500 | Total Loss: 0.0335 | Spoof Loss: 0.0271 | Adv Loss: 0.0063
+  Epoch 1 | Step 350/500 | Total Loss: 0.0117 | Spoof Loss: 0.0047 | Adv Loss: 0.0070
+  Epoch 1 | Step 400/500 | Total Loss: 0.2509 | Spoof Loss: 0.2398 | Adv Loss: 0.0111
+  Epoch 1 | Step 450/500 | Total Loss: 0.1454 | Spoof Loss: 0.1264 | Adv Loss: 0.0190
+  Epoch 1 | Step 500/500 | Total Loss: 0.1998 | Spoof Loss: 0.1882 | Adv Loss: 0.0116
+--- EPOCH 1 SUMMARY ---
+Avg Train Loss: 0.2554
+
+--- Validating Epoch 1 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 1 EER: 28.50% ---
+✨ New best EER: 28.50%. Saving model... ✨
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 2/50 ---
+  Epoch 2 | Step 50/500 | Total Loss: 0.2046 | Spoof Loss: 0.1917 | Adv Loss: 0.0129
+  Epoch 2 | Step 100/500 | Total Loss: 0.0791 | Spoof Loss: 0.0725 | Adv Loss: 0.0066
+  Epoch 2 | Step 150/500 | Total Loss: 0.0943 | Spoof Loss: 0.0880 | Adv Loss: 0.0063
+  Epoch 2 | Step 200/500 | Total Loss: 0.0281 | Spoof Loss: 0.0232 | Adv Loss: 0.0049
+  Epoch 2 | Step 250/500 | Total Loss: 0.0167 | Spoof Loss: 0.0100 | Adv Loss: 0.0067
+  Epoch 2 | Step 300/500 | Total Loss: 0.0127 | Spoof Loss: 0.0075 | Adv Loss: 0.0052
+  Epoch 2 | Step 350/500 | Total Loss: 0.0371 | Spoof Loss: 0.0307 | Adv Loss: 0.0064
+  Epoch 2 | Step 400/500 | Total Loss: 0.0736 | Spoof Loss: 0.0639 | Adv Loss: 0.0097
+  Epoch 2 | Step 450/500 | Total Loss: 0.1043 | Spoof Loss: 0.0873 | Adv Loss: 0.0171
+  Epoch 2 | Step 500/500 | Total Loss: 0.0630 | Spoof Loss: 0.0521 | Adv Loss: 0.0109
+--- EPOCH 2 SUMMARY ---
+Avg Train Loss: 0.1444
+
+--- Validating Epoch 2 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 2 EER: 31.56% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 3/50 ---
+  Epoch 3 | Step 50/500 | Total Loss: 0.1612 | Spoof Loss: 0.1494 | Adv Loss: 0.0119
+  Epoch 3 | Step 100/500 | Total Loss: 0.0544 | Spoof Loss: 0.0483 | Adv Loss: 0.0061
+  Epoch 3 | Step 150/500 | Total Loss: 0.0966 | Spoof Loss: 0.0909 | Adv Loss: 0.0057
+  Epoch 3 | Step 200/500 | Total Loss: 0.0506 | Spoof Loss: 0.0459 | Adv Loss: 0.0047
+  Epoch 3 | Step 250/500 | Total Loss: 0.0163 | Spoof Loss: 0.0097 | Adv Loss: 0.0065
+  Epoch 3 | Step 300/500 | Total Loss: 0.0123 | Spoof Loss: 0.0069 | Adv Loss: 0.0054
+  Epoch 3 | Step 350/500 | Total Loss: 0.0248 | Spoof Loss: 0.0194 | Adv Loss: 0.0054
+  Epoch 3 | Step 400/500 | Total Loss: 0.0431 | Spoof Loss: 0.0338 | Adv Loss: 0.0093
+  Epoch 3 | Step 450/500 | Total Loss: 0.0804 | Spoof Loss: 0.0635 | Adv Loss: 0.0170
+  Epoch 3 | Step 500/500 | Total Loss: 0.0317 | Spoof Loss: 0.0215 | Adv Loss: 0.0102
+--- EPOCH 3 SUMMARY ---
+Avg Train Loss: 0.1156
+
+--- Validating Epoch 3 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 3 EER: 42.44% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 4/50 ---
+  Epoch 4 | Step 50/500 | Total Loss: 0.1834 | Spoof Loss: 0.1720 | Adv Loss: 0.0114
+  Epoch 4 | Step 100/500 | Total Loss: 0.0290 | Spoof Loss: 0.0227 | Adv Loss: 0.0063
+  Epoch 4 | Step 150/500 | Total Loss: 0.0891 | Spoof Loss: 0.0835 | Adv Loss: 0.0057
+  Epoch 4 | Step 200/500 | Total Loss: 0.0337 | Spoof Loss: 0.0294 | Adv Loss: 0.0043
+  Epoch 4 | Step 250/500 | Total Loss: 0.0128 | Spoof Loss: 0.0068 | Adv Loss: 0.0059
+  Epoch 4 | Step 300/500 | Total Loss: 0.0113 | Spoof Loss: 0.0057 | Adv Loss: 0.0056
+  Epoch 4 | Step 350/500 | Total Loss: 0.0267 | Spoof Loss: 0.0211 | Adv Loss: 0.0056
+  Epoch 4 | Step 400/500 | Total Loss: 0.0199 | Spoof Loss: 0.0109 | Adv Loss: 0.0090
+  Epoch 4 | Step 450/500 | Total Loss: 0.0428 | Spoof Loss: 0.0266 | Adv Loss: 0.0162
+  Epoch 4 | Step 500/500 | Total Loss: 0.0292 | Spoof Loss: 0.0193 | Adv Loss: 0.0099
+--- EPOCH 4 SUMMARY ---
+Avg Train Loss: 0.0930
+
+--- Validating Epoch 4 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 4 EER: 51.82% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 5/50 ---
+  Epoch 5 | Step 50/500 | Total Loss: 0.1277 | Spoof Loss: 0.1166 | Adv Loss: 0.0111
+  Epoch 5 | Step 100/500 | Total Loss: 0.0418 | Spoof Loss: 0.0355 | Adv Loss: 0.0063
+  Epoch 5 | Step 150/500 | Total Loss: 0.0661 | Spoof Loss: 0.0604 | Adv Loss: 0.0057
+  Epoch 5 | Step 200/500 | Total Loss: 0.0260 | Spoof Loss: 0.0212 | Adv Loss: 0.0048
+  Epoch 5 | Step 250/500 | Total Loss: 0.0109 | Spoof Loss: 0.0050 | Adv Loss: 0.0058
+  Epoch 5 | Step 300/500 | Total Loss: 0.0095 | Spoof Loss: 0.0045 | Adv Loss: 0.0050
+  Epoch 5 | Step 350/500 | Total Loss: 0.0172 | Spoof Loss: 0.0118 | Adv Loss: 0.0054
+  Epoch 5 | Step 400/500 | Total Loss: 0.0174 | Spoof Loss: 0.0085 | Adv Loss: 0.0089
+  Epoch 5 | Step 450/500 | Total Loss: 0.0591 | Spoof Loss: 0.0430 | Adv Loss: 0.0161
+  Epoch 5 | Step 500/500 | Total Loss: 0.0270 | Spoof Loss: 0.0172 | Adv Loss: 0.0098
+--- EPOCH 5 SUMMARY ---
+Avg Train Loss: 0.0770
+
+--- Validating Epoch 5 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 5 EER: 41.88% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 6/50 ---
+  Epoch 6 | Step 50/500 | Total Loss: 0.1083 | Spoof Loss: 0.0978 | Adv Loss: 0.0105
+  Epoch 6 | Step 100/500 | Total Loss: 0.0171 | Spoof Loss: 0.0106 | Adv Loss: 0.0066
+  Epoch 6 | Step 150/500 | Total Loss: 0.0326 | Spoof Loss: 0.0269 | Adv Loss: 0.0057
+  Epoch 6 | Step 200/500 | Total Loss: 0.0168 | Spoof Loss: 0.0124 | Adv Loss: 0.0044
+  Epoch 6 | Step 250/500 | Total Loss: 0.0107 | Spoof Loss: 0.0046 | Adv Loss: 0.0061
+  Epoch 6 | Step 300/500 | Total Loss: 0.0070 | Spoof Loss: 0.0024 | Adv Loss: 0.0047
+  Epoch 6 | Step 350/500 | Total Loss: 0.0104 | Spoof Loss: 0.0050 | Adv Loss: 0.0054
+  Epoch 6 | Step 400/500 | Total Loss: 0.0166 | Spoof Loss: 0.0077 | Adv Loss: 0.0089
+  Epoch 6 | Step 450/500 | Total Loss: 0.0279 | Spoof Loss: 0.0125 | Adv Loss: 0.0154
+  Epoch 6 | Step 500/500 | Total Loss: 0.0278 | Spoof Loss: 0.0174 | Adv Loss: 0.0104
+--- EPOCH 6 SUMMARY ---
+Avg Train Loss: 0.0582
+
+--- Validating Epoch 6 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 6 EER: 36.99% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 7/50 ---
+  Epoch 7 | Step 50/500 | Total Loss: 0.0984 | Spoof Loss: 0.0878 | Adv Loss: 0.0106
+  Epoch 7 | Step 100/500 | Total Loss: 0.0241 | Spoof Loss: 0.0182 | Adv Loss: 0.0059
+  Epoch 7 | Step 150/500 | Total Loss: 0.0145 | Spoof Loss: 0.0085 | Adv Loss: 0.0061
+  Epoch 7 | Step 200/500 | Total Loss: 0.0109 | Spoof Loss: 0.0059 | Adv Loss: 0.0050
+  Epoch 7 | Step 250/500 | Total Loss: 0.0105 | Spoof Loss: 0.0042 | Adv Loss: 0.0062
+  Epoch 7 | Step 300/500 | Total Loss: 0.0069 | Spoof Loss: 0.0019 | Adv Loss: 0.0050
+  Epoch 7 | Step 350/500 | Total Loss: 0.0114 | Spoof Loss: 0.0057 | Adv Loss: 0.0057
+  Epoch 7 | Step 400/500 | Total Loss: 0.0235 | Spoof Loss: 0.0147 | Adv Loss: 0.0088
+  Epoch 7 | Step 450/500 | Total Loss: 0.0209 | Spoof Loss: 0.0047 | Adv Loss: 0.0162
+  Epoch 7 | Step 500/500 | Total Loss: 0.0422 | Spoof Loss: 0.0311 | Adv Loss: 0.0111
+--- EPOCH 7 SUMMARY ---
+Avg Train Loss: 0.0508
+
+--- Validating Epoch 7 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 7 EER: 34.19% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 8/50 ---
+  Epoch 8 | Step 50/500 | Total Loss: 0.0931 | Spoof Loss: 0.0820 | Adv Loss: 0.0111
+  Epoch 8 | Step 100/500 | Total Loss: 0.0357 | Spoof Loss: 0.0294 | Adv Loss: 0.0063
+  Epoch 8 | Step 150/500 | Total Loss: 0.0131 | Spoof Loss: 0.0070 | Adv Loss: 0.0060
+  Epoch 8 | Step 200/500 | Total Loss: 0.0700 | Spoof Loss: 0.0653 | Adv Loss: 0.0047
+  Epoch 8 | Step 250/500 | Total Loss: 0.0131 | Spoof Loss: 0.0061 | Adv Loss: 0.0070
+  Epoch 8 | Step 300/500 | Total Loss: 0.0065 | Spoof Loss: 0.0014 | Adv Loss: 0.0051
+  Epoch 8 | Step 350/500 | Total Loss: 0.0110 | Spoof Loss: 0.0054 | Adv Loss: 0.0056
+  Epoch 8 | Step 400/500 | Total Loss: 0.0184 | Spoof Loss: 0.0094 | Adv Loss: 0.0090
+  Epoch 8 | Step 450/500 | Total Loss: 0.0226 | Spoof Loss: 0.0062 | Adv Loss: 0.0164
+  Epoch 8 | Step 500/500 | Total Loss: 0.0174 | Spoof Loss: 0.0070 | Adv Loss: 0.0103
+--- EPOCH 8 SUMMARY ---
+Avg Train Loss: 0.0420
+
+--- Validating Epoch 8 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 8 EER: 31.99% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 9/50 ---
+  Epoch 9 | Step 50/500 | Total Loss: 0.2071 | Spoof Loss: 0.1957 | Adv Loss: 0.0114
+  Epoch 9 | Step 100/500 | Total Loss: 0.0168 | Spoof Loss: 0.0105 | Adv Loss: 0.0064
+HTTP Error 504 thrown while requesting GET https://huggingface.co/datasets/mueller91/MLAAD/resolve/c519e2a0b1f2840458f28ea20111116092d447c2/fake/ar/tts_models_multilingual_multi-dataset_xtts_v1.1/jane_eyre_32_f000071.wav
+Retrying in 1s [Retry 1/5].
+  Epoch 9 | Step 150/500 | Total Loss: 0.0087 | Spoof Loss: 0.0022 | Adv Loss: 0.0064
+  Epoch 9 | Step 200/500 | Total Loss: 0.0168 | Spoof Loss: 0.0119 | Adv Loss: 0.0049
+  Epoch 9 | Step 250/500 | Total Loss: 0.0080 | Spoof Loss: 0.0014 | Adv Loss: 0.0066
+  Epoch 9 | Step 300/500 | Total Loss: 0.0056 | Spoof Loss: 0.0008 | Adv Loss: 0.0048
+  Epoch 9 | Step 350/500 | Total Loss: 0.0077 | Spoof Loss: 0.0017 | Adv Loss: 0.0060
+  Epoch 9 | Step 400/500 | Total Loss: 0.0141 | Spoof Loss: 0.0052 | Adv Loss: 0.0088
+  Epoch 9 | Step 450/500 | Total Loss: 0.0391 | Spoof Loss: 0.0222 | Adv Loss: 0.0169
+  Epoch 9 | Step 500/500 | Total Loss: 0.0335 | Spoof Loss: 0.0232 | Adv Loss: 0.0103
+--- EPOCH 9 SUMMARY ---
+Avg Train Loss: 0.0522
+
+--- Validating Epoch 9 ---
+  Validation Step 50/100...
+'(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: b63f18b3-0563-4fa4-b174-548466f94c2a)')' thrown while requesting GET https://huggingface.co/datasets/mueller91/MLAAD/resolve/c519e2a0b1f2840458f28ea20111116092d447c2/fake/bg/tts_models_multilingual_multi-dataset_bark/jane_eyre_27_f000052.wav
+Retrying in 1s [Retry 1/5].
+'(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 8ea7b9db-a470-4304-9698-d88c96d890ce)')' thrown while requesting GET https://huggingface.co/datasets/mueller91/MLAAD/resolve/c519e2a0b1f2840458f28ea20111116092d447c2/fake/bg/tts_models_multilingual_multi-dataset_bark/jane_eyre_31_f000163.wav
+Retrying in 1s [Retry 1/5].
+  Validation Step 100/100...
+--- VALIDATION EPOCH 9 EER: 35.47% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 10/50 ---
+  Epoch 10 | Step 50/500 | Total Loss: 0.0736 | Spoof Loss: 0.0629 | Adv Loss: 0.0107
+  Epoch 10 | Step 100/500 | Total Loss: 0.0060 | Spoof Loss: 0.0008 | Adv Loss: 0.0053
+  Epoch 10 | Step 150/500 | Total Loss: 0.0193 | Spoof Loss: 0.0141 | Adv Loss: 0.0053
+  Epoch 10 | Step 200/500 | Total Loss: 0.0069 | Spoof Loss: 0.0023 | Adv Loss: 0.0046
+  Epoch 10 | Step 250/500 | Total Loss: 0.0128 | Spoof Loss: 0.0062 | Adv Loss: 0.0066
+  Epoch 10 | Step 300/500 | Total Loss: 0.0072 | Spoof Loss: 0.0024 | Adv Loss: 0.0048
+  Epoch 10 | Step 350/500 | Total Loss: 0.0081 | Spoof Loss: 0.0030 | Adv Loss: 0.0050
+  Epoch 10 | Step 400/500 | Total Loss: 0.0155 | Spoof Loss: 0.0069 | Adv Loss: 0.0086
+  Epoch 10 | Step 450/500 | Total Loss: 0.3344 | Spoof Loss: 0.3176 | Adv Loss: 0.0168
+  Epoch 10 | Step 500/500 | Total Loss: 0.0111 | Spoof Loss: 0.0009 | Adv Loss: 0.0101
+--- EPOCH 10 SUMMARY ---
+Avg Train Loss: 0.0373
+
+--- Validating Epoch 10 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 10 EER: 46.74% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 11/50 ---
+  Epoch 11 | Step 50/500 | Total Loss: 0.0775 | Spoof Loss: 0.0654 | Adv Loss: 0.0120
+  Epoch 11 | Step 100/500 | Total Loss: 0.0063 | Spoof Loss: 0.0002 | Adv Loss: 0.0060
+  Epoch 11 | Step 150/500 | Total Loss: 0.0095 | Spoof Loss: 0.0036 | Adv Loss: 0.0060
+  Epoch 11 | Step 200/500 | Total Loss: 0.0374 | Spoof Loss: 0.0319 | Adv Loss: 0.0055
+  Epoch 11 | Step 250/500 | Total Loss: 0.0102 | Spoof Loss: 0.0040 | Adv Loss: 0.0062
+  Epoch 11 | Step 300/500 | Total Loss: 0.0058 | Spoof Loss: 0.0005 | Adv Loss: 0.0052
+  Epoch 11 | Step 350/500 | Total Loss: 0.0080 | Spoof Loss: 0.0022 | Adv Loss: 0.0057
+  Epoch 11 | Step 400/500 | Total Loss: 0.0129 | Spoof Loss: 0.0040 | Adv Loss: 0.0089
+  Epoch 11 | Step 450/500 | Total Loss: 0.0172 | Spoof Loss: 0.0008 | Adv Loss: 0.0164
+  Epoch 11 | Step 500/500 | Total Loss: 0.0112 | Spoof Loss: 0.0012 | Adv Loss: 0.0100
+--- EPOCH 11 SUMMARY ---
+Avg Train Loss: 0.0278
+
+--- Validating Epoch 11 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 11 EER: 50.26% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 12/50 ---
+  Epoch 12 | Step 50/500 | Total Loss: 0.0380 | Spoof Loss: 0.0268 | Adv Loss: 0.0112
+  Epoch 12 | Step 100/500 | Total Loss: 0.0064 | Spoof Loss: 0.0001 | Adv Loss: 0.0063
+  Epoch 12 | Step 150/500 | Total Loss: 0.0178 | Spoof Loss: 0.0117 | Adv Loss: 0.0062
+  Epoch 12 | Step 200/500 | Total Loss: 0.0194 | Spoof Loss: 0.0148 | Adv Loss: 0.0046
+  Epoch 12 | Step 250/500 | Total Loss: 0.0123 | Spoof Loss: 0.0058 | Adv Loss: 0.0065
+  Epoch 12 | Step 300/500 | Total Loss: 0.0060 | Spoof Loss: 0.0004 | Adv Loss: 0.0056
+  Epoch 12 | Step 350/500 | Total Loss: 0.0195 | Spoof Loss: 0.0138 | Adv Loss: 0.0057
+  Epoch 12 | Step 400/500 | Total Loss: 0.0147 | Spoof Loss: 0.0054 | Adv Loss: 0.0093
+  Epoch 12 | Step 450/500 | Total Loss: 0.0452 | Spoof Loss: 0.0284 | Adv Loss: 0.0169
+  Epoch 12 | Step 500/500 | Total Loss: 0.0809 | Spoof Loss: 0.0705 | Adv Loss: 0.0104
+--- EPOCH 12 SUMMARY ---
+Avg Train Loss: 0.0237
+
+--- Validating Epoch 12 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 12 EER: 50.00% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 13/50 ---
+  Epoch 13 | Step 50/500 | Total Loss: 0.0211 | Spoof Loss: 0.0098 | Adv Loss: 0.0113
+  Epoch 13 | Step 100/500 | Total Loss: 0.0065 | Spoof Loss: 0.0005 | Adv Loss: 0.0060
+  Epoch 13 | Step 150/500 | Total Loss: 0.0772 | Spoof Loss: 0.0717 | Adv Loss: 0.0055
+  Epoch 13 | Step 200/500 | Total Loss: 0.0064 | Spoof Loss: 0.0013 | Adv Loss: 0.0050
+  Epoch 13 | Step 250/500 | Total Loss: 0.0077 | Spoof Loss: 0.0004 | Adv Loss: 0.0073
+  Epoch 13 | Step 300/500 | Total Loss: 0.0056 | Spoof Loss: 0.0002 | Adv Loss: 0.0053
+  Epoch 13 | Step 350/500 | Total Loss: 0.0232 | Spoof Loss: 0.0178 | Adv Loss: 0.0054
+  Epoch 13 | Step 400/500 | Total Loss: 0.0532 | Spoof Loss: 0.0441 | Adv Loss: 0.0091
+  Epoch 13 | Step 450/500 | Total Loss: 0.0387 | Spoof Loss: 0.0218 | Adv Loss: 0.0169
+  Epoch 13 | Step 500/500 | Total Loss: 0.0110 | Spoof Loss: 0.0009 | Adv Loss: 0.0101
+--- EPOCH 13 SUMMARY ---
+Avg Train Loss: 0.0304
+
+--- Validating Epoch 13 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 13 EER: 39.57% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 14/50 ---
+  Epoch 14 | Step 50/500 | Total Loss: 0.0681 | Spoof Loss: 0.0567 | Adv Loss: 0.0115
+  Epoch 14 | Step 100/500 | Total Loss: 0.0110 | Spoof Loss: 0.0048 | Adv Loss: 0.0062
+  Epoch 14 | Step 150/500 | Total Loss: 0.0082 | Spoof Loss: 0.0022 | Adv Loss: 0.0061
+  Epoch 14 | Step 200/500 | Total Loss: 0.0109 | Spoof Loss: 0.0062 | Adv Loss: 0.0047
+  Epoch 14 | Step 250/500 | Total Loss: 0.0073 | Spoof Loss: 0.0002 | Adv Loss: 0.0071
+  Epoch 14 | Step 300/500 | Total Loss: 0.0051 | Spoof Loss: 0.0003 | Adv Loss: 0.0048
+  Epoch 14 | Step 350/500 | Total Loss: 0.0102 | Spoof Loss: 0.0050 | Adv Loss: 0.0052
+  Epoch 14 | Step 400/500 | Total Loss: 0.0093 | Spoof Loss: 0.0001 | Adv Loss: 0.0093
+  Epoch 14 | Step 450/500 | Total Loss: 0.0166 | Spoof Loss: 0.0006 | Adv Loss: 0.0160
+  Epoch 14 | Step 500/500 | Total Loss: 0.0119 | Spoof Loss: 0.0011 | Adv Loss: 0.0108
+--- EPOCH 14 SUMMARY ---
+Avg Train Loss: 0.0237
+
+--- Validating Epoch 14 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 14 EER: 50.00% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 15/50 ---
+  Epoch 15 | Step 50/500 | Total Loss: 0.0802 | Spoof Loss: 0.0683 | Adv Loss: 0.0119
+  Epoch 15 | Step 100/500 | Total Loss: 0.0066 | Spoof Loss: 0.0002 | Adv Loss: 0.0064
+  Epoch 15 | Step 150/500 | Total Loss: 0.0073 | Spoof Loss: 0.0013 | Adv Loss: 0.0061
+  Epoch 15 | Step 200/500 | Total Loss: 0.0090 | Spoof Loss: 0.0043 | Adv Loss: 0.0047
+  Epoch 15 | Step 250/500 | Total Loss: 0.0177 | Spoof Loss: 0.0116 | Adv Loss: 0.0061
+  Epoch 15 | Step 300/500 | Total Loss: 0.0054 | Spoof Loss: 0.0007 | Adv Loss: 0.0047
+  Epoch 15 | Step 350/500 | Total Loss: 0.0057 | Spoof Loss: 0.0005 | Adv Loss: 0.0052
+  Epoch 15 | Step 400/500 | Total Loss: 0.0101 | Spoof Loss: 0.0004 | Adv Loss: 0.0097
+  Epoch 15 | Step 450/500 | Total Loss: 0.0196 | Spoof Loss: 0.0025 | Adv Loss: 0.0171
+  Epoch 15 | Step 500/500 | Total Loss: 0.0106 | Spoof Loss: 0.0005 | Adv Loss: 0.0100
+--- EPOCH 15 SUMMARY ---
+Avg Train Loss: 0.0162
+
+--- Validating Epoch 15 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 15 EER: 50.00% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 16/50 ---
+  Epoch 16 | Step 50/500 | Total Loss: 0.0143 | Spoof Loss: 0.0026 | Adv Loss: 0.0117
+  Epoch 16 | Step 100/500 | Total Loss: 0.0058 | Spoof Loss: 0.0001 | Adv Loss: 0.0058
+  Epoch 16 | Step 150/500 | Total Loss: 0.0073 | Spoof Loss: 0.0016 | Adv Loss: 0.0057
+  Epoch 16 | Step 200/500 | Total Loss: 0.0427 | Spoof Loss: 0.0381 | Adv Loss: 0.0046
+  Epoch 16 | Step 250/500 | Total Loss: 0.0068 | Spoof Loss: 0.0003 | Adv Loss: 0.0065
+  Epoch 16 | Step 300/500 | Total Loss: 0.0050 | Spoof Loss: 0.0001 | Adv Loss: 0.0049
+  Epoch 16 | Step 350/500 | Total Loss: 0.0071 | Spoof Loss: 0.0019 | Adv Loss: 0.0052
+  Epoch 16 | Step 400/500 | Total Loss: 0.0099 | Spoof Loss: 0.0007 | Adv Loss: 0.0092
+  Epoch 16 | Step 450/500 | Total Loss: 0.0181 | Spoof Loss: 0.0013 | Adv Loss: 0.0168
+  Epoch 16 | Step 500/500 | Total Loss: 0.0127 | Spoof Loss: 0.0030 | Adv Loss: 0.0097
+--- EPOCH 16 SUMMARY ---
+Avg Train Loss: 0.0200
+
+--- Validating Epoch 16 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 16 EER: 50.00% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 17/50 ---
+  Epoch 17 | Step 50/500 | Total Loss: 0.0158 | Spoof Loss: 0.0043 | Adv Loss: 0.0115
+  Epoch 17 | Step 100/500 | Total Loss: 0.0153 | Spoof Loss: 0.0088 | Adv Loss: 0.0065
+  Epoch 17 | Step 150/500 | Total Loss: 0.0183 | Spoof Loss: 0.0126 | Adv Loss: 0.0057
+  Epoch 17 | Step 200/500 | Total Loss: 0.0072 | Spoof Loss: 0.0026 | Adv Loss: 0.0046
+  Epoch 17 | Step 250/500 | Total Loss: 0.0090 | Spoof Loss: 0.0023 | Adv Loss: 0.0067
+  Epoch 17 | Step 300/500 | Total Loss: 0.0053 | Spoof Loss: 0.0003 | Adv Loss: 0.0050
+  Epoch 17 | Step 350/500 | Total Loss: 0.0151 | Spoof Loss: 0.0097 | Adv Loss: 0.0054
+  Epoch 17 | Step 400/500 | Total Loss: 0.0096 | Spoof Loss: 0.0008 | Adv Loss: 0.0088
+  Epoch 17 | Step 450/500 | Total Loss: 0.0841 | Spoof Loss: 0.0675 | Adv Loss: 0.0166
+  Epoch 17 | Step 500/500 | Total Loss: 0.0110 | Spoof Loss: 0.0006 | Adv Loss: 0.0104
+--- EPOCH 17 SUMMARY ---
+Avg Train Loss: 0.0174
+
+--- Validating Epoch 17 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 17 EER: 50.00% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 18/50 ---
+  Epoch 18 | Step 50/500 | Total Loss: 0.0504 | Spoof Loss: 0.0390 | Adv Loss: 0.0114
+  Epoch 18 | Step 100/500 | Total Loss: 0.0073 | Spoof Loss: 0.0010 | Adv Loss: 0.0062
+  Epoch 18 | Step 150/500 | Total Loss: 0.0069 | Spoof Loss: 0.0014 | Adv Loss: 0.0056
+  Epoch 18 | Step 200/500 | Total Loss: 0.0046 | Spoof Loss: 0.0004 | Adv Loss: 0.0043
+  Epoch 18 | Step 250/500 | Total Loss: 0.0072 | Spoof Loss: 0.0001 | Adv Loss: 0.0070
+  Epoch 18 | Step 300/500 | Total Loss: 0.0056 | Spoof Loss: 0.0000 | Adv Loss: 0.0056
+  Epoch 18 | Step 350/500 | Total Loss: 0.2309 | Spoof Loss: 0.2247 | Adv Loss: 0.0062
+  Epoch 18 | Step 400/500 | Total Loss: 0.0119 | Spoof Loss: 0.0027 | Adv Loss: 0.0092
+  Epoch 18 | Step 450/500 | Total Loss: 0.0189 | Spoof Loss: 0.0023 | Adv Loss: 0.0167
+  Epoch 18 | Step 500/500 | Total Loss: 0.0106 | Spoof Loss: 0.0006 | Adv Loss: 0.0100
+--- EPOCH 18 SUMMARY ---
+Avg Train Loss: 0.0173
+
+--- Validating Epoch 18 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 18 EER: 50.00% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 19/50 ---
+  Epoch 19 | Step 50/500 | Total Loss: 0.0122 | Spoof Loss: 0.0008 | Adv Loss: 0.0114
+  Epoch 19 | Step 100/500 | Total Loss: 0.0063 | Spoof Loss: 0.0002 | Adv Loss: 0.0061
+  Epoch 19 | Step 150/500 | Total Loss: 0.0257 | Spoof Loss: 0.0201 | Adv Loss: 0.0056
+  Epoch 19 | Step 200/500 | Total Loss: 0.0054 | Spoof Loss: 0.0007 | Adv Loss: 0.0047
+  Epoch 19 | Step 250/500 | Total Loss: 0.0063 | Spoof Loss: 0.0001 | Adv Loss: 0.0062
+  Epoch 19 | Step 300/500 | Total Loss: 0.0053 | Spoof Loss: 0.0003 | Adv Loss: 0.0050
+  Epoch 19 | Step 350/500 | Total Loss: 0.0056 | Spoof Loss: 0.0002 | Adv Loss: 0.0054
+  Epoch 19 | Step 400/500 | Total Loss: 0.0126 | Spoof Loss: 0.0036 | Adv Loss: 0.0090
+  Epoch 19 | Step 450/500 | Total Loss: 0.0181 | Spoof Loss: 0.0012 | Adv Loss: 0.0169
+  Epoch 19 | Step 500/500 | Total Loss: 0.0106 | Spoof Loss: 0.0004 | Adv Loss: 0.0102
+--- EPOCH 19 SUMMARY ---
+Avg Train Loss: 0.0179
+
+--- Validating Epoch 19 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 19 EER: 27.58% ---
+✨ New best EER: 27.58%. Saving model... ✨
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 20/50 ---
+  Epoch 20 | Step 50/500 | Total Loss: 0.0119 | Spoof Loss: 0.0003 | Adv Loss: 0.0116
+  Epoch 20 | Step 100/500 | Total Loss: 0.0070 | Spoof Loss: 0.0007 | Adv Loss: 0.0063
+  Epoch 20 | Step 150/500 | Total Loss: 0.0075 | Spoof Loss: 0.0006 | Adv Loss: 0.0069
+  Epoch 20 | Step 200/500 | Total Loss: 0.0049 | Spoof Loss: 0.0002 | Adv Loss: 0.0047
+  Epoch 20 | Step 250/500 | Total Loss: 0.0070 | Spoof Loss: 0.0001 | Adv Loss: 0.0069
+  Epoch 20 | Step 300/500 | Total Loss: 0.0054 | Spoof Loss: 0.0001 | Adv Loss: 0.0053
+  Epoch 20 | Step 350/500 | Total Loss: 0.0064 | Spoof Loss: 0.0012 | Adv Loss: 0.0052
+  Epoch 20 | Step 400/500 | Total Loss: 0.0092 | Spoof Loss: 0.0001 | Adv Loss: 0.0090
+  Epoch 20 | Step 450/500 | Total Loss: 0.0166 | Spoof Loss: 0.0002 | Adv Loss: 0.0164
+  Epoch 20 | Step 500/500 | Total Loss: 0.0111 | Spoof Loss: 0.0010 | Adv Loss: 0.0101
+--- EPOCH 20 SUMMARY ---
+Avg Train Loss: 0.0239
+
+--- Validating Epoch 20 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 20 EER: 50.00% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 21/50 ---
+  Epoch 21 | Step 50/500 | Total Loss: 0.1370 | Spoof Loss: 0.1261 | Adv Loss: 0.0110
+  Epoch 21 | Step 100/500 | Total Loss: 0.0061 | Spoof Loss: 0.0001 | Adv Loss: 0.0060
+  Epoch 21 | Step 150/500 | Total Loss: 0.0358 | Spoof Loss: 0.0308 | Adv Loss: 0.0050
+  Epoch 21 | Step 200/500 | Total Loss: 0.0057 | Spoof Loss: 0.0009 | Adv Loss: 0.0049
+  Epoch 21 | Step 250/500 | Total Loss: 0.0090 | Spoof Loss: 0.0014 | Adv Loss: 0.0076
+  Epoch 21 | Step 300/500 | Total Loss: 0.0046 | Spoof Loss: 0.0000 | Adv Loss: 0.0046
+  Epoch 21 | Step 350/500 | Total Loss: 0.0058 | Spoof Loss: 0.0006 | Adv Loss: 0.0053
+  Epoch 21 | Step 400/500 | Total Loss: 0.0093 | Spoof Loss: 0.0001 | Adv Loss: 0.0091
+  Epoch 21 | Step 450/500 | Total Loss: 0.0227 | Spoof Loss: 0.0066 | Adv Loss: 0.0161
+  Epoch 21 | Step 500/500 | Total Loss: 0.0098 | Spoof Loss: 0.0002 | Adv Loss: 0.0096
+--- EPOCH 21 SUMMARY ---
+Avg Train Loss: 0.0146
+
+--- Validating Epoch 21 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 21 EER: 50.06% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 22/50 ---
+  Epoch 22 | Step 50/500 | Total Loss: 0.0393 | Spoof Loss: 0.0277 | Adv Loss: 0.0116
+  Epoch 22 | Step 100/500 | Total Loss: 0.0064 | Spoof Loss: 0.0000 | Adv Loss: 0.0064
+  Epoch 22 | Step 150/500 | Total Loss: 0.0061 | Spoof Loss: 0.0002 | Adv Loss: 0.0059
+  Epoch 22 | Step 200/500 | Total Loss: 0.0047 | Spoof Loss: 0.0000 | Adv Loss: 0.0046
+  Epoch 22 | Step 250/500 | Total Loss: 0.0075 | Spoof Loss: 0.0001 | Adv Loss: 0.0074
+  Epoch 22 | Step 300/500 | Total Loss: 0.0051 | Spoof Loss: 0.0000 | Adv Loss: 0.0051
+  Epoch 22 | Step 350/500 | Total Loss: 0.0060 | Spoof Loss: 0.0009 | Adv Loss: 0.0052
+  Epoch 22 | Step 400/500 | Total Loss: 0.0088 | Spoof Loss: 0.0000 | Adv Loss: 0.0087
+  Epoch 22 | Step 450/500 | Total Loss: 0.0171 | Spoof Loss: 0.0003 | Adv Loss: 0.0168
+  Epoch 22 | Step 500/500 | Total Loss: 0.0113 | Spoof Loss: 0.0011 | Adv Loss: 0.0102
+--- EPOCH 22 SUMMARY ---
+Avg Train Loss: 0.0126
+
+--- Validating Epoch 22 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 22 EER: 50.00% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 23/50 ---
+  Epoch 23 | Step 50/500 | Total Loss: 0.0171 | Spoof Loss: 0.0059 | Adv Loss: 0.0112
+  Epoch 23 | Step 100/500 | Total Loss: 0.0066 | Spoof Loss: 0.0001 | Adv Loss: 0.0064
+  Epoch 23 | Step 150/500 | Total Loss: 0.0069 | Spoof Loss: 0.0011 | Adv Loss: 0.0058
+  Epoch 23 | Step 200/500 | Total Loss: 0.0047 | Spoof Loss: 0.0002 | Adv Loss: 0.0045
+  Epoch 23 | Step 250/500 | Total Loss: 0.0068 | Spoof Loss: 0.0001 | Adv Loss: 0.0067
+  Epoch 23 | Step 300/500 | Total Loss: 0.0049 | Spoof Loss: 0.0000 | Adv Loss: 0.0049
+  Epoch 23 | Step 350/500 | Total Loss: 0.0057 | Spoof Loss: 0.0002 | Adv Loss: 0.0055
+  Epoch 23 | Step 400/500 | Total Loss: 0.0187 | Spoof Loss: 0.0097 | Adv Loss: 0.0090
+  Epoch 23 | Step 450/500 | Total Loss: 0.0170 | Spoof Loss: 0.0004 | Adv Loss: 0.0166
+  Epoch 23 | Step 500/500 | Total Loss: 0.0106 | Spoof Loss: 0.0001 | Adv Loss: 0.0104
+--- EPOCH 23 SUMMARY ---
+Avg Train Loss: 0.0171
+
+--- Validating Epoch 23 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 23 EER: 50.06% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 24/50 ---
+  Epoch 24 | Step 50/500 | Total Loss: 0.1786 | Spoof Loss: 0.1667 | Adv Loss: 0.0119
+  Epoch 24 | Step 100/500 | Total Loss: 0.0073 | Spoof Loss: 0.0007 | Adv Loss: 0.0067
+  Epoch 24 | Step 150/500 | Total Loss: 0.0064 | Spoof Loss: 0.0004 | Adv Loss: 0.0060
+  Epoch 24 | Step 200/500 | Total Loss: 0.0096 | Spoof Loss: 0.0047 | Adv Loss: 0.0049
+  Epoch 24 | Step 250/500 | Total Loss: 0.0066 | Spoof Loss: 0.0001 | Adv Loss: 0.0065
+  Epoch 24 | Step 300/500 | Total Loss: 0.0051 | Spoof Loss: 0.0000 | Adv Loss: 0.0050
+  Epoch 24 | Step 350/500 | Total Loss: 0.0062 | Spoof Loss: 0.0009 | Adv Loss: 0.0053
+  Epoch 24 | Step 400/500 | Total Loss: 0.0093 | Spoof Loss: 0.0003 | Adv Loss: 0.0090
+  Epoch 24 | Step 450/500 | Total Loss: 0.0205 | Spoof Loss: 0.0028 | Adv Loss: 0.0177
+  Epoch 24 | Step 500/500 | Total Loss: 0.0188 | Spoof Loss: 0.0084 | Adv Loss: 0.0104
+--- EPOCH 24 SUMMARY ---
+Avg Train Loss: 0.0135
+
+--- Validating Epoch 24 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 24 EER: 20.64% ---
+✨ New best EER: 20.64%. Saving model... ✨
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 25/50 ---
+  Epoch 25 | Step 50/500 | Total Loss: 0.0131 | Spoof Loss: 0.0019 | Adv Loss: 0.0113
+  Epoch 25 | Step 100/500 | Total Loss: 0.0068 | Spoof Loss: 0.0003 | Adv Loss: 0.0065
+  Epoch 25 | Step 150/500 | Total Loss: 0.0068 | Spoof Loss: 0.0013 | Adv Loss: 0.0055
+  Epoch 25 | Step 200/500 | Total Loss: 0.0054 | Spoof Loss: 0.0007 | Adv Loss: 0.0047
+  Epoch 25 | Step 250/500 | Total Loss: 0.0067 | Spoof Loss: 0.0001 | Adv Loss: 0.0066
+  Epoch 25 | Step 300/500 | Total Loss: 0.0396 | Spoof Loss: 0.0349 | Adv Loss: 0.0047
+  Epoch 25 | Step 350/500 | Total Loss: 0.0067 | Spoof Loss: 0.0014 | Adv Loss: 0.0053
+  Epoch 25 | Step 400/500 | Total Loss: 0.0088 | Spoof Loss: 0.0001 | Adv Loss: 0.0088
+  Epoch 25 | Step 450/500 | Total Loss: 0.0166 | Spoof Loss: 0.0000 | Adv Loss: 0.0166
+  Epoch 25 | Step 500/500 | Total Loss: 0.0138 | Spoof Loss: 0.0026 | Adv Loss: 0.0112
+--- EPOCH 25 SUMMARY ---
+Avg Train Loss: 0.0161
+
+--- Validating Epoch 25 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 25 EER: 20.84% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 26/50 ---
+  Epoch 26 | Step 50/500 | Total Loss: 0.0181 | Spoof Loss: 0.0070 | Adv Loss: 0.0110
+  Epoch 26 | Step 100/500 | Total Loss: 0.0065 | Spoof Loss: 0.0002 | Adv Loss: 0.0063
+  Epoch 26 | Step 150/500 | Total Loss: 0.0070 | Spoof Loss: 0.0005 | Adv Loss: 0.0065
+  Epoch 26 | Step 200/500 | Total Loss: 0.0052 | Spoof Loss: 0.0006 | Adv Loss: 0.0045
+  Epoch 26 | Step 250/500 | Total Loss: 0.0059 | Spoof Loss: 0.0000 | Adv Loss: 0.0059
+  Epoch 26 | Step 300/500 | Total Loss: 0.0054 | Spoof Loss: 0.0001 | Adv Loss: 0.0052
+  Epoch 26 | Step 350/500 | Total Loss: 0.0312 | Spoof Loss: 0.0255 | Adv Loss: 0.0057
+  Epoch 26 | Step 400/500 | Total Loss: 0.0094 | Spoof Loss: 0.0000 | Adv Loss: 0.0094
+  Epoch 26 | Step 450/500 | Total Loss: 0.0723 | Spoof Loss: 0.0553 | Adv Loss: 0.0171
+  Epoch 26 | Step 500/500 | Total Loss: 0.0215 | Spoof Loss: 0.0118 | Adv Loss: 0.0097
+--- EPOCH 26 SUMMARY ---
+Avg Train Loss: 0.0175
+
+--- Validating Epoch 26 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 26 EER: 50.00% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 27/50 ---
+  Epoch 27 | Step 50/500 | Total Loss: 0.0139 | Spoof Loss: 0.0027 | Adv Loss: 0.0113
+  Epoch 27 | Step 100/500 | Total Loss: 0.0065 | Spoof Loss: 0.0005 | Adv Loss: 0.0061
+  Epoch 27 | Step 150/500 | Total Loss: 0.0074 | Spoof Loss: 0.0011 | Adv Loss: 0.0063
+  Epoch 27 | Step 200/500 | Total Loss: 0.0192 | Spoof Loss: 0.0142 | Adv Loss: 0.0050
+  Epoch 27 | Step 250/500 | Total Loss: 0.0060 | Spoof Loss: 0.0001 | Adv Loss: 0.0060
+  Epoch 27 | Step 300/500 | Total Loss: 0.0056 | Spoof Loss: 0.0006 | Adv Loss: 0.0050
+  Epoch 27 | Step 350/500 | Total Loss: 0.0059 | Spoof Loss: 0.0003 | Adv Loss: 0.0055
+  Epoch 27 | Step 400/500 | Total Loss: 0.0100 | Spoof Loss: 0.0001 | Adv Loss: 0.0098
+  Epoch 27 | Step 450/500 | Total Loss: 0.0168 | Spoof Loss: 0.0002 | Adv Loss: 0.0166
+  Epoch 27 | Step 500/500 | Total Loss: 0.0101 | Spoof Loss: 0.0002 | Adv Loss: 0.0099
+--- EPOCH 27 SUMMARY ---
+Avg Train Loss: 0.0151
+
+--- Validating Epoch 27 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 27 EER: 50.00% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 28/50 ---
+  Epoch 28 | Step 50/500 | Total Loss: 0.0231 | Spoof Loss: 0.0123 | Adv Loss: 0.0108
+  Epoch 28 | Step 100/500 | Total Loss: 0.0063 | Spoof Loss: 0.0000 | Adv Loss: 0.0062
+  Epoch 28 | Step 150/500 | Total Loss: 0.0074 | Spoof Loss: 0.0022 | Adv Loss: 0.0052
+  Epoch 28 | Step 200/500 | Total Loss: 0.0051 | Spoof Loss: 0.0002 | Adv Loss: 0.0049
+  Epoch 28 | Step 250/500 | Total Loss: 0.0063 | Spoof Loss: 0.0001 | Adv Loss: 0.0062
+  Epoch 28 | Step 300/500 | Total Loss: 0.0053 | Spoof Loss: 0.0002 | Adv Loss: 0.0051
+  Epoch 28 | Step 350/500 | Total Loss: 0.0383 | Spoof Loss: 0.0332 | Adv Loss: 0.0051
+  Epoch 28 | Step 400/500 | Total Loss: 0.0094 | Spoof Loss: 0.0000 | Adv Loss: 0.0094
+  Epoch 28 | Step 450/500 | Total Loss: 0.0338 | Spoof Loss: 0.0171 | Adv Loss: 0.0167
+  Epoch 28 | Step 500/500 | Total Loss: 0.0107 | Spoof Loss: 0.0001 | Adv Loss: 0.0106
+--- EPOCH 28 SUMMARY ---
+Avg Train Loss: 0.0106
+
+--- Validating Epoch 28 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 28 EER: 47.07% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 29/50 ---
+  Epoch 29 | Step 50/500 | Total Loss: 0.0157 | Spoof Loss: 0.0046 | Adv Loss: 0.0112
+  Epoch 29 | Step 100/500 | Total Loss: 0.0058 | Spoof Loss: 0.0000 | Adv Loss: 0.0058
+  Epoch 29 | Step 150/500 | Total Loss: 0.0087 | Spoof Loss: 0.0031 | Adv Loss: 0.0057
+  Epoch 29 | Step 200/500 | Total Loss: 0.0050 | Spoof Loss: 0.0001 | Adv Loss: 0.0049
+  Epoch 29 | Step 250/500 | Total Loss: 0.0072 | Spoof Loss: 0.0000 | Adv Loss: 0.0072
+  Epoch 29 | Step 300/500 | Total Loss: 0.0051 | Spoof Loss: 0.0001 | Adv Loss: 0.0050
+  Epoch 29 | Step 350/500 | Total Loss: 0.0073 | Spoof Loss: 0.0022 | Adv Loss: 0.0051
+  Epoch 29 | Step 400/500 | Total Loss: 0.0090 | Spoof Loss: 0.0000 | Adv Loss: 0.0090
+  Epoch 29 | Step 450/500 | Total Loss: 0.0231 | Spoof Loss: 0.0065 | Adv Loss: 0.0166
+  Epoch 29 | Step 500/500 | Total Loss: 0.0109 | Spoof Loss: 0.0009 | Adv Loss: 0.0100
+--- EPOCH 29 SUMMARY ---
+Avg Train Loss: 0.0106
+
+--- Validating Epoch 29 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 29 EER: 27.37% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 30/50 ---
+  Epoch 30 | Step 50/500 | Total Loss: 0.0124 | Spoof Loss: 0.0015 | Adv Loss: 0.0109
+  Epoch 30 | Step 100/500 | Total Loss: 0.0066 | Spoof Loss: 0.0007 | Adv Loss: 0.0059
+  Epoch 30 | Step 150/500 | Total Loss: 0.0088 | Spoof Loss: 0.0025 | Adv Loss: 0.0063
+  Epoch 30 | Step 200/500 | Total Loss: 0.0050 | Spoof Loss: 0.0003 | Adv Loss: 0.0047
+  Epoch 30 | Step 250/500 | Total Loss: 0.0068 | Spoof Loss: 0.0001 | Adv Loss: 0.0068
+  Epoch 30 | Step 300/500 | Total Loss: 0.0075 | Spoof Loss: 0.0028 | Adv Loss: 0.0047
+  Epoch 30 | Step 350/500 | Total Loss: 0.0080 | Spoof Loss: 0.0031 | Adv Loss: 0.0050
+  Epoch 30 | Step 400/500 | Total Loss: 0.0214 | Spoof Loss: 0.0121 | Adv Loss: 0.0094
+  Epoch 30 | Step 450/500 | Total Loss: 0.0169 | Spoof Loss: 0.0003 | Adv Loss: 0.0166
+  Epoch 30 | Step 500/500 | Total Loss: 0.0099 | Spoof Loss: 0.0001 | Adv Loss: 0.0098
+--- EPOCH 30 SUMMARY ---
+Avg Train Loss: 0.0104
+
+--- Validating Epoch 30 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 30 EER: 50.00% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 31/50 ---
+  Epoch 31 | Step 50/500 | Total Loss: 0.0115 | Spoof Loss: 0.0001 | Adv Loss: 0.0114
+  Epoch 31 | Step 100/500 | Total Loss: 0.0099 | Spoof Loss: 0.0038 | Adv Loss: 0.0061
+  Epoch 31 | Step 150/500 | Total Loss: 0.0143 | Spoof Loss: 0.0083 | Adv Loss: 0.0060
+  Epoch 31 | Step 200/500 | Total Loss: 0.0049 | Spoof Loss: 0.0004 | Adv Loss: 0.0045
+  Epoch 31 | Step 250/500 | Total Loss: 0.0082 | Spoof Loss: 0.0016 | Adv Loss: 0.0066
+  Epoch 31 | Step 300/500 | Total Loss: 0.0049 | Spoof Loss: 0.0000 | Adv Loss: 0.0049
+  Epoch 31 | Step 350/500 | Total Loss: 0.0087 | Spoof Loss: 0.0036 | Adv Loss: 0.0051
+  Epoch 31 | Step 400/500 | Total Loss: 0.0091 | Spoof Loss: 0.0000 | Adv Loss: 0.0090
+  Epoch 31 | Step 450/500 | Total Loss: 0.0175 | Spoof Loss: 0.0003 | Adv Loss: 0.0172
+  Epoch 31 | Step 500/500 | Total Loss: 0.0120 | Spoof Loss: 0.0010 | Adv Loss: 0.0110
+--- EPOCH 31 SUMMARY ---
+Avg Train Loss: 0.0209
+
+--- Validating Epoch 31 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 31 EER: 18.81% ---
+✨ New best EER: 18.81%. Saving model... ✨
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 32/50 ---
+  Epoch 32 | Step 50/500 | Total Loss: 0.0224 | Spoof Loss: 0.0106 | Adv Loss: 0.0118
+  Epoch 32 | Step 100/500 | Total Loss: 0.0079 | Spoof Loss: 0.0014 | Adv Loss: 0.0065
+  Epoch 32 | Step 150/500 | Total Loss: 0.0071 | Spoof Loss: 0.0006 | Adv Loss: 0.0066
+  Epoch 32 | Step 200/500 | Total Loss: 0.0049 | Spoof Loss: 0.0000 | Adv Loss: 0.0049
+  Epoch 32 | Step 250/500 | Total Loss: 0.0063 | Spoof Loss: 0.0001 | Adv Loss: 0.0063
+  Epoch 32 | Step 300/500 | Total Loss: 0.0049 | Spoof Loss: 0.0001 | Adv Loss: 0.0048
+  Epoch 32 | Step 350/500 | Total Loss: 0.0156 | Spoof Loss: 0.0103 | Adv Loss: 0.0053
+  Epoch 32 | Step 400/500 | Total Loss: 0.0091 | Spoof Loss: 0.0000 | Adv Loss: 0.0091
+  Epoch 32 | Step 450/500 | Total Loss: 0.3139 | Spoof Loss: 0.2974 | Adv Loss: 0.0165
+  Epoch 32 | Step 500/500 | Total Loss: 0.0106 | Spoof Loss: 0.0004 | Adv Loss: 0.0102
+--- EPOCH 32 SUMMARY ---
+Avg Train Loss: 0.0141
+
+--- Validating Epoch 32 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 32 EER: 50.00% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 33/50 ---
+  Epoch 33 | Step 50/500 | Total Loss: 0.0922 | Spoof Loss: 0.0809 | Adv Loss: 0.0113
+  Epoch 33 | Step 100/500 | Total Loss: 0.0069 | Spoof Loss: 0.0000 | Adv Loss: 0.0069
+  Epoch 33 | Step 150/500 | Total Loss: 0.0062 | Spoof Loss: 0.0001 | Adv Loss: 0.0061
+  Epoch 33 | Step 200/500 | Total Loss: 0.0091 | Spoof Loss: 0.0046 | Adv Loss: 0.0045
+  Epoch 33 | Step 250/500 | Total Loss: 0.0066 | Spoof Loss: 0.0001 | Adv Loss: 0.0064
+  Epoch 33 | Step 300/500 | Total Loss: 0.0049 | Spoof Loss: 0.0000 | Adv Loss: 0.0048
+  Epoch 33 | Step 350/500 | Total Loss: 0.3126 | Spoof Loss: 0.3071 | Adv Loss: 0.0055
+  Epoch 33 | Step 400/500 | Total Loss: 0.0096 | Spoof Loss: 0.0000 | Adv Loss: 0.0096
+  Epoch 33 | Step 450/500 | Total Loss: 0.0177 | Spoof Loss: 0.0006 | Adv Loss: 0.0171
+  Epoch 33 | Step 500/500 | Total Loss: 0.0168 | Spoof Loss: 0.0065 | Adv Loss: 0.0103
+--- EPOCH 33 SUMMARY ---
+Avg Train Loss: 0.0187
+
+--- Validating Epoch 33 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 33 EER: 50.00% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 34/50 ---
+  Epoch 34 | Step 50/500 | Total Loss: 0.0304 | Spoof Loss: 0.0186 | Adv Loss: 0.0118
+  Epoch 34 | Step 100/500 | Total Loss: 0.0063 | Spoof Loss: 0.0001 | Adv Loss: 0.0062
+  Epoch 34 | Step 150/500 | Total Loss: 0.0058 | Spoof Loss: 0.0004 | Adv Loss: 0.0053
+  Epoch 34 | Step 200/500 | Total Loss: 0.0050 | Spoof Loss: 0.0001 | Adv Loss: 0.0050
+  Epoch 34 | Step 250/500 | Total Loss: 0.0113 | Spoof Loss: 0.0043 | Adv Loss: 0.0070
+  Epoch 34 | Step 300/500 | Total Loss: 0.0054 | Spoof Loss: 0.0000 | Adv Loss: 0.0053
+  Epoch 34 | Step 350/500 | Total Loss: 0.0123 | Spoof Loss: 0.0068 | Adv Loss: 0.0055
+  Epoch 34 | Step 400/500 | Total Loss: 0.0095 | Spoof Loss: 0.0000 | Adv Loss: 0.0095
+  Epoch 34 | Step 450/500 | Total Loss: 0.0173 | Spoof Loss: 0.0007 | Adv Loss: 0.0166
+  Epoch 34 | Step 500/500 | Total Loss: 0.0188 | Spoof Loss: 0.0084 | Adv Loss: 0.0105
+--- EPOCH 34 SUMMARY ---
+Avg Train Loss: 0.0130
+
+--- Validating Epoch 34 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 34 EER: 50.13% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 35/50 ---
+  Epoch 35 | Step 50/500 | Total Loss: 0.0126 | Spoof Loss: 0.0009 | Adv Loss: 0.0117
+  Epoch 35 | Step 100/500 | Total Loss: 0.0064 | Spoof Loss: 0.0002 | Adv Loss: 0.0061
+  Epoch 35 | Step 150/500 | Total Loss: 0.0225 | Spoof Loss: 0.0168 | Adv Loss: 0.0057
+  Epoch 35 | Step 200/500 | Total Loss: 0.0054 | Spoof Loss: 0.0001 | Adv Loss: 0.0053
+  Epoch 35 | Step 250/500 | Total Loss: 0.0080 | Spoof Loss: 0.0023 | Adv Loss: 0.0057
+  Epoch 35 | Step 300/500 | Total Loss: 0.0049 | Spoof Loss: 0.0000 | Adv Loss: 0.0049
+  Epoch 35 | Step 350/500 | Total Loss: 0.0132 | Spoof Loss: 0.0080 | Adv Loss: 0.0052
+  Epoch 35 | Step 400/500 | Total Loss: 0.0088 | Spoof Loss: 0.0000 | Adv Loss: 0.0088
+  Epoch 35 | Step 450/500 | Total Loss: 0.0180 | Spoof Loss: 0.0010 | Adv Loss: 0.0169
+  Epoch 35 | Step 500/500 | Total Loss: 0.0100 | Spoof Loss: 0.0001 | Adv Loss: 0.0098
+--- EPOCH 35 SUMMARY ---
+Avg Train Loss: 0.0119
+
+--- Validating Epoch 35 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 35 EER: 50.00% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 36/50 ---
+  Epoch 36 | Step 50/500 | Total Loss: 0.0121 | Spoof Loss: 0.0005 | Adv Loss: 0.0116
+  Epoch 36 | Step 100/500 | Total Loss: 0.0065 | Spoof Loss: 0.0005 | Adv Loss: 0.0060
+  Epoch 36 | Step 150/500 | Total Loss: 0.0067 | Spoof Loss: 0.0003 | Adv Loss: 0.0064
+  Epoch 36 | Step 200/500 | Total Loss: 0.0053 | Spoof Loss: 0.0003 | Adv Loss: 0.0050
+  Epoch 36 | Step 250/500 | Total Loss: 0.0077 | Spoof Loss: 0.0011 | Adv Loss: 0.0066
+  Epoch 36 | Step 300/500 | Total Loss: 0.0050 | Spoof Loss: 0.0000 | Adv Loss: 0.0049
+  Epoch 36 | Step 350/500 | Total Loss: 0.0065 | Spoof Loss: 0.0014 | Adv Loss: 0.0051
+  Epoch 36 | Step 400/500 | Total Loss: 0.0091 | Spoof Loss: 0.0000 | Adv Loss: 0.0091
+  Epoch 36 | Step 450/500 | Total Loss: 0.0215 | Spoof Loss: 0.0047 | Adv Loss: 0.0168
+  Epoch 36 | Step 500/500 | Total Loss: 0.0101 | Spoof Loss: 0.0001 | Adv Loss: 0.0100
+--- EPOCH 36 SUMMARY ---
+Avg Train Loss: 0.0116
+
+--- Validating Epoch 36 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 36 EER: 50.00% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 37/50 ---
+  Epoch 37 | Step 50/500 | Total Loss: 0.0194 | Spoof Loss: 0.0075 | Adv Loss: 0.0119
+  Epoch 37 | Step 100/500 | Total Loss: 0.0061 | Spoof Loss: 0.0000 | Adv Loss: 0.0061
+  Epoch 37 | Step 150/500 | Total Loss: 0.0058 | Spoof Loss: 0.0002 | Adv Loss: 0.0056
+  Epoch 37 | Step 200/500 | Total Loss: 0.0052 | Spoof Loss: 0.0001 | Adv Loss: 0.0051
+  Epoch 37 | Step 250/500 | Total Loss: 0.0068 | Spoof Loss: 0.0001 | Adv Loss: 0.0067
+  Epoch 37 | Step 300/500 | Total Loss: 0.0051 | Spoof Loss: 0.0000 | Adv Loss: 0.0050
+  Epoch 37 | Step 350/500 | Total Loss: 0.0082 | Spoof Loss: 0.0028 | Adv Loss: 0.0054
+  Epoch 37 | Step 400/500 | Total Loss: 0.0089 | Spoof Loss: 0.0000 | Adv Loss: 0.0089
+  Epoch 37 | Step 450/500 | Total Loss: 0.0170 | Spoof Loss: 0.0001 | Adv Loss: 0.0169
+  Epoch 37 | Step 500/500 | Total Loss: 0.0873 | Spoof Loss: 0.0771 | Adv Loss: 0.0102
+--- EPOCH 37 SUMMARY ---
+Avg Train Loss: 0.0141
+
+--- Validating Epoch 37 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 37 EER: 50.00% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 38/50 ---
+  Epoch 38 | Step 50/500 | Total Loss: 0.0367 | Spoof Loss: 0.0250 | Adv Loss: 0.0117
+  Epoch 38 | Step 100/500 | Total Loss: 0.0065 | Spoof Loss: 0.0000 | Adv Loss: 0.0065
+  Epoch 38 | Step 150/500 | Total Loss: 0.0087 | Spoof Loss: 0.0031 | Adv Loss: 0.0056
+  Epoch 38 | Step 200/500 | Total Loss: 0.0050 | Spoof Loss: 0.0002 | Adv Loss: 0.0048
+  Epoch 38 | Step 250/500 | Total Loss: 0.0077 | Spoof Loss: 0.0004 | Adv Loss: 0.0072
+  Epoch 38 | Step 300/500 | Total Loss: 0.0048 | Spoof Loss: 0.0000 | Adv Loss: 0.0047
+  Epoch 38 | Step 350/500 | Total Loss: 0.0054 | Spoof Loss: 0.0000 | Adv Loss: 0.0053
+  Epoch 38 | Step 400/500 | Total Loss: 0.0091 | Spoof Loss: 0.0000 | Adv Loss: 0.0091
+  Epoch 38 | Step 450/500 | Total Loss: 0.0165 | Spoof Loss: 0.0000 | Adv Loss: 0.0165
+  Epoch 38 | Step 500/500 | Total Loss: 0.0103 | Spoof Loss: 0.0001 | Adv Loss: 0.0102
+--- EPOCH 38 SUMMARY ---
+Avg Train Loss: 0.0138
+
+--- Validating Epoch 38 ---
+  Validation Step 50/100...
+  Validation Step 100/100...
+--- VALIDATION EPOCH 38 EER: 50.00% ---
+
+--- Loading train data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=train.clean.100)
+Interleaving real and fake streams...
+--- train dataloader created ---
+
+--- Loading validation data stream ---
+Loading FAKE data: mueller91/MLAAD (split=train)
+Loading REAL data: librispeech_asr (split=validation.clean)
+Interleaving real and fake streams...
+--- validation dataloader created ---
+
+--- Starting Epoch 39/50 ---
+  Epoch 39 | Step 50/500 | Total Loss: 0.1565 | Spoof Loss: 0.1445 | Adv Loss: 0.0121
+  Epoch 39 | Step 100/500 | Total Loss: 0.0060 | Spoof Loss: 0.0000 | Adv Loss: 0.0060
