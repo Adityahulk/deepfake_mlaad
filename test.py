@@ -10,7 +10,8 @@ from sklearn.metrics import roc_curve
 import os
 
 # --- Configuration (MUST MATCH TRAIN.PY) ---
-DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# Change DEVICE line to:
+DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 SAMPLE_RATE = 16000
 N_MELS = 80
 MAX_AUDIO_LEN_SECONDS = 4
@@ -173,7 +174,7 @@ def evaluate_model(model_path, data_dir):
 # --- 4. Main Execution ---
 if __name__ == "__main__":
     DATA_DIR = "./LA"  # Ensure this points to your unzipped LA folder
-    MODEL_FILE = "prosody_encoder_best.pth"
+    MODEL_FILE = "prosody_encoder_best_yet.pth"
     
     if os.path.exists(MODEL_FILE) and os.path.exists(DATA_DIR):
         evaluate_model(MODEL_FILE, DATA_DIR)
